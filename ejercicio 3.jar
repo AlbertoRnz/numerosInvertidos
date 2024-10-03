@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ejercicio3 {
+
+
+    public static void main(String[] args) {
+
+        int numero, invertido = 0, resto;
+        //Creamos las variables para el ejercicio y las igualamos a 0 y a resto
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Introduce un número: ");
+
+        numero = scanner.nextInt(); //Aqui va la respuesta introducida por el usuario
+
+        while (numero > 0) {
+                resto = numero % 10;     // Para sacar los distintos digitos
+                invertido = invertido * 10 + resto;     //Para invertirlos usando la multiplicación
+                numero /= 10;   //Luego divide el número por 10 para ir a por el siguiente digito   
+
+        }
+
+        System.out.println("Número invertido: " + invertido);
+    }
+
+}
